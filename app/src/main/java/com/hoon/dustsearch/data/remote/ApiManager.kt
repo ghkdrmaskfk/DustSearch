@@ -2,6 +2,7 @@ package com.hoon.dustsearch.data.remote
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.hoon.dustsearch.common.ApiConsts
 import com.hoon.dustsearch.data.remote.api.BaseApi
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -15,8 +16,6 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 object ApiManager {
-
-    val BASE_URL: String = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/"
 
     val CONNECT_TIMEOUT: Long = 15
     val WRITE_TIMEOUT: Long = 15
@@ -40,7 +39,7 @@ object ApiManager {
         }.build()
 
         retrofit = Retrofit.Builder().apply {
-            baseUrl(BASE_URL)
+            baseUrl(ApiConsts.API_SERVER_HOST)
             client(okHttpClient)
             addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))

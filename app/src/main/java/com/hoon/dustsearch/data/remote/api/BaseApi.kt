@@ -1,6 +1,7 @@
 package com.hoon.dustsearch.data.remote.api
 
-import com.hoon.dustsearch.model.CtprvnMesureModel
+import com.hoon.dustsearch.model.CtprvnMesure
+import com.hoon.dustsearch.model.CtprvnMesureResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -13,5 +14,5 @@ interface BaseApi {
                             @Query("pageNo") pageNo : Int,
                             @Query("numOfRows") numOfRows : Int,
                             @Query("ServiceKey") ServiceKey : String,
-                            @Query("_returnType") returnType : String) : Call<CtprvnMesureModel>
+                            @Query("_returnType") returnType : String) : Call<CtprvnMesureResponse>
 }

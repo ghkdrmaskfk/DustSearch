@@ -9,26 +9,9 @@ import org.koin.dsl.module.module
 
 class MyApplication : Application() {
 
-    var modelPart = module { factory<DataModel> { DataModelImpl() } }
-
-    var viewModelPart = module { viewModel { MainViewModel(get()) } }
-
-    var myDiModule = listOf(modelPart, viewModelPart)
-
     override fun onCreate() {
         super.onCreate()
-
-        startKoin(applicationContext, myDiModule)
     }
 }
 
-interface DataModel {
-    fun getData()
-}
-
-class DataModelImpl: DataModel {
-    override fun getData() {
-        return
-    }
-}
 

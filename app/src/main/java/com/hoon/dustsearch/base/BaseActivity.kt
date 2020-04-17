@@ -41,8 +41,6 @@ abstract class BaseActivity<T : ViewDataBinding, R : BaseViewModel> : AppCompatA
      */
     abstract fun initAfterBinding()
 
-    private var isSetBackButtonValid = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
