@@ -1,9 +1,9 @@
 package com.hoon.dustsearch.data.remote.api
 
-import com.hoon.dustsearch.model.CtprvnMesure
-import com.hoon.dustsearch.model.CtprvnMesureResponse
+import com.hoon.dustsearch.model.CtprvnMesure.CtprvnMesureResponse
 import retrofit2.Call
-import retrofit2.http.*
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface BaseApi {
 

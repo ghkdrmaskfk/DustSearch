@@ -1,4 +1,4 @@
-package com.hoon.dustsearch.model
+package com.hoon.dustsearch.model.CtprvnMesure
 
 import com.google.gson.annotations.SerializedName
 

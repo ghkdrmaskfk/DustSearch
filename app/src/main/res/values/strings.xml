@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DustSearch</string>
+    <string name="bottom_title_fine_dust">미세먼지</string>
+    <string name="bottom_title_weather">날씨</string>
 </resources>

@@ -1,22 +1,21 @@
-package com.hoon.dustsearch.ui
+package com.hoon.dustsearch.ui.activity
 
 import android.content.Intent
-import android.os.Bundle
 import android.os.Handler
 import com.hoon.dustsearch.R
 import com.hoon.dustsearch.base.BaseActivity
-
 import com.hoon.dustsearch.databinding.ActivitySplashBinding
-import com.hoon.dustsearch.viewModel.MainViewModel
-import com.hoon.dustsearch.viewModel.SplashViewModel
+import com.hoon.dustsearch.viewModel.activity.SplashViewModel
 
 class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>() {
 
     val TAG = "SplashActivity"
+    val START_DELAYED_TIME: Long = 2000
 
     override val layoutResourceId: Int
         get() = R.layout.activity_splash
-    override val viewModel: SplashViewModel = SplashViewModel()
+    override val viewModel: SplashViewModel =
+        SplashViewModel()
 
     override fun initStartView() {
 
@@ -34,10 +33,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>() {
                 startActivity(intent)
                 finish()
             }
-        }, 3000)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        }, START_DELAYED_TIME)
     }
 }
