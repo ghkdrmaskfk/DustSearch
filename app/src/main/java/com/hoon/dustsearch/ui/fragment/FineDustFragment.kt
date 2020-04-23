@@ -1,26 +1,23 @@
 package com.hoon.dustsearch.ui.fragment
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
-import com.hoon.dustsearch.Application
-import com.hoon.dustsearch.R
+import androidx.viewpager.widget.ViewPager
+import com.github.mikephil.charting.charts.PieChart
 import com.hoon.dustsearch.base.BaseFragment
 import com.hoon.dustsearch.databinding.FragmentFineDustBinding
+import com.hoon.dustsearch.model.CtprvnMesure.CtprvnMesure
 import com.hoon.dustsearch.viewModel.fragment.FineDustFragViewModel
-import kotlinx.android.synthetic.main.activity_main.*
 
-class FineDustFragment : BaseFragment(){
+class FineDustFragment() : BaseFragment() {
 
-    private lateinit var viewDataBinding: FragmentFineDustBinding
-    lateinit var viewModel: ViewModel
+
+    lateinit var viewDataBinding: FragmentFineDustBinding
+    lateinit var viewModel: FineDustFragViewModel
+    lateinit var pieChart: PieChart
+
     override fun initStartView() {
 
     }
@@ -40,10 +37,15 @@ class FineDustFragment : BaseFragment(){
             viewModel = FineDustFragViewModel()
             lifecycleOwner = this@FineDustFragment.viewLifecycleOwner
         }
+
         return viewDataBinding.root
     }
+    private fun initPieChart(ctprvnMesure: List<CtprvnMesure>) {
+        pieChart = viewDataBinding.fineDustPieChart
+        pieChart.invalidate()
+        pieChart.clear()
 
 
 
-
+    }
 }

@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+    <data>
+        <variable name="main" type="com.hoon.dustsearch.ui.activity.MainActivity" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.hoon.dustsearch.ui.activity.MainActivity"
-        android:background="@color/colorWhite">
+        android:fitsSystemWindows="true">
 
-        <FrameLayout
-            android:id="@+id/fragment_container"
+        <include
+            android:id="@+id/main_layout_include"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            layout="@layout/main_content_layout"/>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:padding="8dp"
             android:background="@color/colorWhite"
-            android:elevation="1dp"/>
+            app:headerLayout="@layout/main_drawer_header"
+            app:menu="@menu/menu_navigation_view">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@android:color/white"
-            app:itemIconTint="@color/selector_bottom_navigation"
-            app:itemTextColor="@color/selector_bottom_navigation"
-            app:labelVisibilityMode="labeled"
-            android:outlineProvider="bounds"
-            android:elevation="5dp"
-            app:menu="@menu/menu_bottom_navigation_view" />
-
-    </RelativeLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

@@ -2,6 +2,7 @@ package com.hoon.dustsearch.viewModel.activity
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.hoon.dustsearch.adapter.MainFragPagerAdapter
 import com.hoon.dustsearch.base.BaseViewModel
 import com.hoon.dustsearch.common.ApiConsts
 import com.hoon.dustsearch.data.remote.ApiManager
@@ -39,4 +40,5 @@ class MainViewModel: BaseViewModel() {
         })
         return CtprvnMesureData
     }
+
 }

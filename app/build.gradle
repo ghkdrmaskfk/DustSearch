@@ -26,6 +26,11 @@ android {
     }
 }
 
+repositories {
+    // MPAndroidChart
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -64,7 +69,13 @@ dependencies {
     // recycler View
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
-    implementation "com.android.support:design:25.0.0"
+    // circle indicator 뷰 페이저의 포커스를 동그라미 인덱스로 표시
+    implementation 'me.relex:circleindicator:1.2.2'
+
+    // MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation "com.android.support:design:28.0.0"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
