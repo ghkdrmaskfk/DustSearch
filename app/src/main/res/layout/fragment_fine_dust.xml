@@ -66,9 +66,9 @@
                 <RelativeLayout
                     android:id="@+id/fine_dust_layout"
                     android:layout_below="@+id/fine_dust_status_txt"
-                    android:layout_width="300dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_centerHorizontal="true">
 
                     <ImageView
@@ -76,6 +76,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
                         android:src="@drawable/ic_fine_dust" />
 
                     <LinearLayout
@@ -145,7 +146,20 @@
                                 android:text="'???'"
                                 android:textSize="14sp"/>
                         </LinearLayout>
-
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/fine_dust_gauge"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            app:gaugeEndValue="300"
+                            app:gaugePointEndColor="@color/colorPrimary"
+                            app:gaugePointStartColor="@color/colorPrimaryDark"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="@color/colorGray"
+                            app:gaugeStrokeWidth="10dp"
+                            app:gaugeSweepAngle="270" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -214,16 +228,31 @@
                                 android:text="'???'"
                                 android:textSize="14sp"/>
                         </LinearLayout>
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/fine_dust_cho_gauge"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            app:gaugeEndValue="300"
+                            app:gaugePointEndColor="@color/colorPrimary"
+                            app:gaugePointStartColor="@color/colorPrimaryDark"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="@color/colorGray"
+                            app:gaugeStrokeWidth="10dp"
+                            app:gaugeSweepAngle="270" />
                     </LinearLayout>
+
                 </RelativeLayout>
-                <com.github.mikephil.charting.charts.PieChart
+                <!--<com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/fine_dust_pie_chart"
                     android:layout_below="@+id/fine_dust_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_centerHorizontal="true"
                     android:orientation="horizontal"
-                    android:layout_margin="16dp" />
+                    android:visibility="gone"/>-->
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

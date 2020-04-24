@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">FineDust Clear</string>
 
-    <!--start navigation View Item-->
+    <!--start navigation view Item-->
     <string name="navi_title_fine_dust">미세먼지</string>
     <string name="navi_title_weather">날씨</string>
     <string name="navi_title_theme_change">테마 변경</string>
     <string name="navi_title_search">검색</string>
-    <!--end navigation View Item-->
+    <!--end navigation view Item-->
+
+    <!--start graph view text-->
+    <string name="graph_level_good">좋음</string>
+    <string name="graph_level_usually">보통</string>
+    <string name="graph_level_bad">나쁨</string>
+    <string name="graph_level_very_bad">매우 나쁨</string>
+    <!--end graph view text-->
 
     <!--start view text-->
     <string name="txt_now_location">현재위치</string>
