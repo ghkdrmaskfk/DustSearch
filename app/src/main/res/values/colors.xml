@@ -4,7 +4,10 @@
     <color name="colorPrimaryDark">#CCCCFF</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorViewWhite">#EEEEEE</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGray">#808080</color>
+    <color name="colorLiteGray">#C0C0C0</color>
     <color name="transparent">#00000000</color>
+    <color name="transparent_20">#10000000</color>
 </resources>

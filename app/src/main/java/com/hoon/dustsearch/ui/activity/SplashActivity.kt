@@ -18,7 +18,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>() {
         SplashViewModel()
 
     override fun initStartView() {
-
     }
 
     override fun initDataBinding() {

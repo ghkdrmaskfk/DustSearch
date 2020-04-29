@@ -35,7 +35,7 @@ object ApiManager {
         }.build()
 
         retrofit = Retrofit.Builder().apply {
-            baseUrl(ApiConsts.API_SERVER_HOST)
+            baseUrl(ApiConsts.PUBLIC_DATA_API_SERVER_HOST)
             client(okHttpClient)
             addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))

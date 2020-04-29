@@ -10,12 +10,15 @@ class Application : Application() {
     init{
         instance = this
     }
-
     companion object {
         private var instance: Application? = null
         fun applicationContext() : Context {
             return instance!!.applicationContext
         }
+    }
+
+    override fun onCreate() {
+        super.onCreate()
     }
 }
 

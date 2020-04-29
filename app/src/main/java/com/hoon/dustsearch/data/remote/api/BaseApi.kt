@@ -1,7 +1,6 @@
 package com.hoon.dustsearch.data.remote.api
 
 import com.hoon.dustsearch.model.CtprvnMesure.CtprvnMesureResponse
-import com.hoon.dustsearch.model.MsrstnAcctoRltmMesureDnsty.MsrstnAcctoRltmMesureDnsty
 import com.hoon.dustsearch.model.MsrstnAcctoRltmMesureDnsty.MsrstnAcctoRltmMesureDnstyResponse
 import retrofit2.Call
 import retrofit2.http.GET

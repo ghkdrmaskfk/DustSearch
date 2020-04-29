@@ -14,11 +14,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.SplashActivity"
-            android:theme="@style/AppNoTitleTheme">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:theme="@style/NoTitleBaseTheme">
+        <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,9 +25,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.MainActivity"
-            android:theme="@style/AppNoTitleTheme">
-        </activity>
+        <activity android:name=".ui.activity.MainActivity" />
     </application>
-
 </manifest>

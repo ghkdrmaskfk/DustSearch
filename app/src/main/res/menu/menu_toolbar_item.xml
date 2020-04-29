@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/theme_change"
+        android:icon="@drawable/ic_theme_change_black"
+        android:title="@string/navi_title_theme_change"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_black"
+        android:title="@string/navi_title_search"
+        app:showAsAction="always"/>
+</menu>

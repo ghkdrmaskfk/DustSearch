@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">FineDust Clear</string>
 
+    <string name="theme_change_text">테마 변경</string>
+    <string name="theme_change_text_radio_1">\u0020\u0020\u0020\u0020\u0020BASIC</string>
+    <string name="gauge_format_text">%s/%s</string>
     <!--start navigation view Item-->
     <string name="navi_title_fine_dust">미세먼지</string>
     <string name="navi_title_weather">날씨</string>

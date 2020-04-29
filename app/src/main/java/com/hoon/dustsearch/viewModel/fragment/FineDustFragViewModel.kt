@@ -23,20 +23,17 @@ class FineDustFragViewModel: BaseViewModel() {
 
         ApiManager.getInstance().getMsrstnAcctoRltmMesureDnstyList(
             "종로구",
-            "month",
+            "Month",
             1,
             10,
-            URLDecoder.decode(ApiConsts.API_SERVER_KEY, "UTF-8"),
+            URLDecoder.decode(ApiConsts.PUBLIC_DATA_API_SERVER_KEY, "UTF-8"),
             "1.3",
             "json").enqueue(object : Callback<MsrstnAcctoRltmMesureDnstyResponse> {
-            override fun onResponse(
-                call: Call<MsrstnAcctoRltmMesureDnstyResponse>,
-                response: Response<MsrstnAcctoRltmMesureDnstyResponse>) {
+            override fun onResponse(call: Call<MsrstnAcctoRltmMesureDnstyResponse>,
+                                    response: Response<MsrstnAcctoRltmMesureDnstyResponse>) {
 
                 msrstnAcctoRltmMesureDnsty.value = response.body()
-
             }
-
             override fun onFailure(call: Call<MsrstnAcctoRltmMesureDnstyResponse>, t: Throwable) {}
         })
         return msrstnAcctoRltmMesureDnsty

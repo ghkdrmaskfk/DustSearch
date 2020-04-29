@@ -27,7 +27,7 @@ class MainViewModel: BaseViewModel() {
             "MONTH",
             1,
             10,
-            URLDecoder.decode(ApiConsts.API_SERVER_KEY,"UTF-8"),
+            URLDecoder.decode(ApiConsts.PUBLIC_DATA_API_SERVER_KEY,"UTF-8"),
             "json").enqueue(object : Callback<CtprvnMesureResponse> {
             override fun onResponse(call: Call<CtprvnMesureResponse>,
                                     response: Response<CtprvnMesureResponse>) {

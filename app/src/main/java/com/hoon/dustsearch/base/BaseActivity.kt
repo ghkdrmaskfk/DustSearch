@@ -43,12 +43,11 @@ abstract class BaseActivity<T : ViewDataBinding, R : BaseViewModel> : AppCompatA
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //setTheme(com.hoon.dustsearch.R.style.NoTitleBlackTheme)
         dataBinding = DataBindingUtil.setContentView(this, layoutResourceId)
         dataBinding.apply {
             lifecycleOwner = this@BaseActivity
         }
-
         initStartView()
         initDataBinding()
         initAfterBinding()

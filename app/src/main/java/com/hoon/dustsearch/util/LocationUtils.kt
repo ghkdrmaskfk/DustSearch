@@ -9,11 +9,9 @@ import android.location.Location
 import android.location.LocationManager
 import android.util.Log
 import androidx.core.app.ActivityCompat
-import com.hoon.dustsearch.Application
 import com.hoon.dustsearch.Application.Companion.applicationContext
 import java.io.IOException
 import java.util.*
-import java.util.jar.Manifest
 
 class LocationUtils {
 
